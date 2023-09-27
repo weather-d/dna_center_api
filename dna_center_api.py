@@ -11,7 +11,7 @@ DEVICES = DNAC.devices.get_device_list()
 CLIENTS = DNAC.clients.get_overall_client_health(timestamp=ep)
 
 for DEVICE in DEVICES.response:
-    pprint(f"Hostname:  {DEVICE['hostname']}, Type: {DEVICE['type']}, Uptime: {DEVICE['upTime']}")
+    pprint(f"Hostname:  {DEVICE.hostName}, Type: {DEVICE.type}, Uptime: {DEVICE.upTime}")
 
 
 print('{0:25s}{1:1}{2:45s}{3:1}{4:15s}'.format("Client Category", "|", "Number of Clients", "|", "Clients Score"))
