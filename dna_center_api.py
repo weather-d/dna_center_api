@@ -18,21 +18,25 @@ print(f'{"Hostname":33s} \
         {"|":1}{"Device Type":53s} \
         {"|":1}{"Uptime":15s}')
 
+print('-'*130)
 
 for DEVICE in DEVICES.response:
     print(f'{DEVICE.hostname:28s} \
              {"|":1}{DEVICE.type:48s} \
              {"|":1}{DEVICE.upTime:15s}')
 
-print('\n')
+print('-'*130)
 
 print(f'{"Client Category":33s} \
         {"|":1}{"Number of Clients":53s} \
         {"|":1}{"Clients Score":15s}')
 
+print('-'*130)
 
 for CLIENT in CLIENTS.response:
     for score in CLIENT.scoreDetail:
         print(f'{score.scoreCategory.value:25s} \
                 {"|":1}{score.clientCount:<45d} \
                 {"|":1}{score.scoreValue:<15d}')
+
+print('-'*130)
